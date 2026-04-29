@@ -1,0 +1,19 @@
+{
+  "policy_id": "remeda-policy-v1",
+  "policy_version": "1.0.0",
+  "description": "Basic policy. Accepts declared identity when core evidence exists.",
+  "rules": {
+    "require_execution": true,
+    "require_integrity": true,
+    "require_timestamp": true,
+    "require_declared_identity": true,
+    "require_gpg_verified_identity": false,
+    "require_sigstore_verified_identity": false
+  },
+  "actions": {
+    "accept": "allow",
+    "pending": "warn",
+    "reject": "block",
+    "error": "block"
+  }
+}

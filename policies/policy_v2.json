@@ -1,0 +1,19 @@
+{
+  "policy_id": "remeda-policy-v2",
+  "policy_version": "2.0.0",
+  "description": "Stricter policy. Requires verified GPG identity.",
+  "rules": {
+    "require_execution": true,
+    "require_integrity": true,
+    "require_timestamp": true,
+    "require_declared_identity": true,
+    "require_gpg_verified_identity": true,
+    "require_sigstore_verified_identity": false
+  },
+  "actions": {
+    "accept": "allow",
+    "pending": "warn",
+    "reject": "block",
+    "error": "block"
+  }
+}

@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>History</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Time</th>
+      <th>URL</th>
+      <th>Policy</th>
+      <th>Decision</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for r in rows %}
+    <tr>
+      <td><a href="/result/{{ r.id }}">{{ r.id }}</a></td>
+      <td>{{ r.created_at }}</td>
+      <td>{{ r.input_url }}</td>
+      <td>{{ r.policy_id }} / {{ r.policy_version }}</td>
+      <td>
+        <span class="badge {{ r.decision }}">{{ r.decision }}</span>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% endblock %}

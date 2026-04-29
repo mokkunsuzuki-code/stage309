@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Verification</h2>
+
+<form method="post">
+  <div class="card">
+    <label>URL</label><br><br>
+    <input name="url" value="{{ url }}">
+  </div>
+
+  <div class="card">
+    <label>Policy</label><br><br>
+    <select name="policy">
+      {% for p in policies %}
+        <option value="{{ p.policy_id }}">
+          {{ p.policy_id }} / {{ p.policy_version }}
+        </option>
+      {% endfor %}
+    </select>
+  </div>
+
+  <div class="card">
+    <label>Manifest JSON</label><br><br>
+    <textarea name="manifest">{{ manifest }}</textarea>
+  </div>
+
+  <button type="submit">Verify</button>
+</form>
+
+{% endblock %}

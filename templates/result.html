@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Result #{{ row.id }}</h2>
+
+<div class="card">
+  <p><strong>Decision:</strong>
+    <span class="badge {{ row.decision }}">{{ row.decision }}</span>
+  </p>
+  <p><strong>Action:</strong> {{ row.action }}</p>
+  <p><strong>Reason:</strong> {{ row.reason }}</p>
+  <p><strong>Policy:</strong> {{ row.policy_id }} / {{ row.policy_version }}</p>
+  <p><strong>Policy SHA:</strong> {{ row.policy_sha256 }}</p>
+  <p><strong>Manifest SHA:</strong> {{ row.manifest_sha256 }}</p>
+</div>
+
+<h3>Raw JSON</h3>
+<pre>{{ row.result_json }}</pre>
+
+<p><a href="/history">Back</a></p>
+
+{% endblock %}

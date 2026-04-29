@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Stage309 REMEDA</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #f6f7fb;
+      color: #172033;
+      margin: 0;
+    }
+    header {
+      background: #111827;
+      color: white;
+      padding: 24px 40px;
+    }
+    main {
+      max-width: 1100px;
+      margin: 30px auto;
+      background: white;
+      padding: 28px;
+      border-radius: 18px;
+    }
+    a { color: #2563eb; }
+    nav a { color: white; margin-right: 18px; }
+    textarea, input, select {
+      width: 100%;
+      padding: 12px;
+      box-sizing: border-box;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+    }
+    textarea {
+      height: 260px;
+      font-family: monospace;
+    }
+    button {
+      padding: 12px 18px;
+      border-radius: 10px;
+      border: none;
+      background: #111827;
+      color: white;
+      cursor: pointer;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      border-bottom: 1px solid #ddd;
+      padding: 10px;
+      text-align: left;
+    }
+    .card {
+      border: 1px solid #ddd;
+      padding: 16px;
+      border-radius: 14px;
+      margin: 16px 0;
+    }
+    .badge {
+      padding: 4px 9px;
+      border-radius: 999px;
+      font-weight: bold;
+    }
+    .accept { background: #dcfce7; color: #166534; }
+    .reject { background: #fee2e2; color: #991b1b; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Stage309 REMEDA Verification History DB</h1>
+    <nav>
+      <a href="/verify">Verify</a>
+      <a href="/history">History</a>
+    </nav>
+  </header>
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+</body>
+</html>

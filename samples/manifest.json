@@ -1,0 +1,15 @@
+{
+  "stage": 309,
+  "subject": "REMEDA Stage309 sample evidence",
+  "claims": {
+    "execution": true,
+    "identity": true,
+    "integrity": true,
+    "timestamp": true,
+    "workflow": "github-actions"
+  },
+  "identity_evidence": {
+    "gpg_verified": true,
+    "sigstore_verified": true
+  }
+}

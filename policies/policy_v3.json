@@ -1,0 +1,19 @@
+{
+  "policy_id": "remeda-policy-v3",
+  "policy_version": "3.0.0",
+  "description": "Future strict policy. Requires both GPG and Sigstore identity proof.",
+  "rules": {
+    "require_execution": true,
+    "require_integrity": true,
+    "require_timestamp": true,
+    "require_declared_identity": true,
+    "require_gpg_verified_identity": true,
+    "require_sigstore_verified_identity": true
+  },
+  "actions": {
+    "accept": "allow",
+    "pending": "warn",
+    "reject": "block",
+    "error": "block"
+  }
+}
